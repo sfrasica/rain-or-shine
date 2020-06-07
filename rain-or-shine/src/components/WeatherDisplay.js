@@ -8,6 +8,8 @@ const WeatherDisplay = () => {
 
     let [dailyData, setDailyData] = useState([])
 
+    const [degreeType, setDegreeType] = useState('fahrenheit')
+
     useEffect(() => {
         const weatherURL =`http://api.openweathermap.org/data/2.5/forecast?zip=11102&units=imperial&APPID=${apiConfig.weatherKey}`
     
@@ -29,12 +31,16 @@ const WeatherDisplay = () => {
 
         />)
     }
-   
+
+    const updateDegreeType = (event) => {
+        setDegreeType(event.target.value)
+    }   
 
 
     return (
         <div>
             {renderDailyCard()}
+            
         </div>
     )
 
