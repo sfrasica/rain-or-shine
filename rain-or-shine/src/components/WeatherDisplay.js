@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import apiConfig from '../apiKeys'
 import DailyCard from './DailyCard'
+import DegreeToggle from './DegreeToggle'
 
 const WeatherDisplay = () => {
 
@@ -39,8 +40,15 @@ const WeatherDisplay = () => {
 
     return (
         <div>
+             <div className="container">
+      <h1 className="display-1 jumbotron">5-Day Forecast.</h1>
+      <h5 className="display-5 text-muted">New York, US</h5>
+        <div className="row justify-content-center"></div>
+            <DegreeToggle 
+                updateDegreeType = {updateDegreeType}
+            />
             {renderDailyCard()}
-            
+        </div>
         </div>
     )
 
