@@ -27,14 +27,15 @@ const WeatherDisplay = () => {
     const renderDailyCard = () => {
         return dailyData.map((reading, index) => 
         <DailyCard
+            degreeType = {degreeType}
             reading = {reading}
             key = {index}
 
         />)
     }
 
-    const updateDegreeType = (event) => {
-        setDegreeType(event.target.value)
+    const updateDegreeType = () => {
+        setDegreeType(degreeType)
     }   
 
 
