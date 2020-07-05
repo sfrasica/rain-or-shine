@@ -2,7 +2,7 @@ import React from 'react';
 
 const DegreeToggle = ({degreeType, updateDegreeType}) => {
   return (
-    <React.Fragment>
+    <>
     <div className="form-check form-check-inline">
         <input
         className="form-check-input"
@@ -27,7 +27,7 @@ const DegreeToggle = ({degreeType, updateDegreeType}) => {
         />
         <label className="form-check-label" for="farenheit">Farenheit</label>
       </div>
-    </React.Fragment>
+    </>
   )
 }
 
