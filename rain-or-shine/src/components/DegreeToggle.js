@@ -26,7 +26,7 @@ const DegreeToggle = ({degreeType, updateDegreeType}) => {
         onChange={updateDegreeType}
         />
         <label className="form-check-label" for="farenheit">Farenheit</label>
-     
+      </div>
     </>
   )
 }
